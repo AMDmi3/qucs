@@ -181,8 +181,7 @@ case $host_os in
       QT_LIB="-lQtCore -lQtGui -lQtXml -lQt3Support -lQtSvg"
       QT_INC="$QT_DEF -DQT3_SUPPORT -DQT_THREAD_SUPPORT -D_REENTRANT"
       [case $host_os in
-        *freebsd4*) QT_LIB="$QT_LIB -pthread" ;;
-        *freebsd*) QT_LIB="$QT_LIB -lpthread" ;;
+        *freebsd*) QT_LIB="$QT_LIB -pthread" ;;
         *mingw*) QT_INC="$QT_INC -mthreads"; QT_LDF="$QT_LDF -mthreads" ;;
       esac]
       QT_MTS="multi-threaded"
